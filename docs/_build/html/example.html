@@ -1,23 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create an experiment from scratch &mdash; PyBOLE v1.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/custom.js"></script>
+  <title>Create an experiment from scratch &mdash; PyBOLE v1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=3de69b8c" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=aabfef7a"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/custom.js?v=807ba70f"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +39,6 @@
           <a href="index.html" class="icon icon-home">
             PyBOLE
           </a>
-              <div class="version">
-                v1.0.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -100,11 +100,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="create-an-experiment-from-scratch">
-<h1>Create an experiment from scratch<a class="headerlink" href="#create-an-experiment-from-scratch" title="Permalink to this headline">¶</a></h1>
+  <section id="create-an-experiment-from-scratch">
+<h1>Create an experiment from scratch<a class="headerlink" href="#create-an-experiment-from-scratch" title="Permalink to this heading"></a></h1>
 <p>The example presented allows you to create an experiment from scratch. However, for specific information needs, it may be necessary to refer to the page <em>“A tour of PyBOLE”</em> in the section in question.</p>
-<div class="section" id="create-an-experiment-entity">
-<h2>1. Create an experiment entity<a class="headerlink" href="#create-an-experiment-entity" title="Permalink to this headline">¶</a></h2>
+<section id="create-an-experiment-entity">
+<h2>1. Create an experiment entity<a class="headerlink" href="#create-an-experiment-entity" title="Permalink to this heading"></a></h2>
 <p>An experiment is composed of 4 pages: information, example, main and end. The administrator interface allows you to create each page, but it will be necessary for each page to associate Django template and CSS and Javascript styles.</p>
 <p>Here are the different creation steps:</p>
 <ul class="simple">
@@ -116,8 +116,8 @@
 <p>For this, for the edition of the code, it is recommended to open the behavioral-online-experiment folder in folder mode (for example with Visual Studio Code or another code editor).</p>
 <p>We start on the web administrator interface: <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000/admin/experiments/</span></code></p>
 <a class="reference internal image-reference" href="_images/admin_interface.png"><img alt="_images/admin_interface.png" class="align-center" src="_images/admin_interface.png" style="width: 80%;" /></a>
-<div class="section" id="information-page">
-<h3>1.1. Information Page<a class="headerlink" href="#information-page" title="Permalink to this headline">¶</a></h3>
+<section id="information-page">
+<h3>1.1. Information Page<a class="headerlink" href="#information-page" title="Permalink to this heading"></a></h3>
 <p>We will start by creating the page for entering information to the user. To do this:</p>
 <ul class="simple">
 <li><p>in the Django Administration interface, use the <code class="docutils literal notranslate"><span class="pre">+Add</span></code> of information;</p></li>
@@ -131,13 +131,13 @@
 <li><p>a JSON field is also available, it allows to specify the content that will be available in the Django template. For this page, it will only contain a sentence inviting the user to enter a data form:</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Please fill the form below:&quot;</span>
+<span class="w">  </span><span class="nt">&quot;question&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Please fill the form below:&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>It is in this HTML template that the JSON field information will be displayed (this one uses only the question field):</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>...
-<span class="c">&lt;!-- Page Heading --&gt;</span>
+<span class="cm">&lt;!-- Page Heading --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;text-center&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>{{page.content|from_json:&quot;question&quot;}}<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -146,9 +146,9 @@
 </div>
 <p>If you create your own templates, you can declare JSON fields that can be processed in the template.</p>
 <p>At the end click on <code class="docutils literal notranslate"><span class="pre">SAVE</span></code>.</p>
-</div>
-<div class="section" id="example-page">
-<h3>1.2. Example page<a class="headerlink" href="#example-page" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="example-page">
+<h3>1.2. Example page<a class="headerlink" href="#example-page" title="Permalink to this heading"></a></h3>
 <p>In the admin interface use <code class="docutils literal notranslate"><span class="pre">+Add</span></code> for examples pages, we find the same information to fill in:</p>
 <ul class="simple">
 <li><p>the name field to <em>“Ponzo Example”</em>;</p></li>
@@ -159,21 +159,21 @@
 </ul>
 <p>The JSON content field is composed of:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Are the two segment equals?&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Press the LEFT button if you think the segment are equals, or the RIGHT button if you think they are differents.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;answer&quot;</span><span class="p">:</span> <span class="s2">&quot;The correct answer is yes!&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="s2">&quot;resources/images/ponzo/ponzo10.png&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-    <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">500</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="nt">&quot;question&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Are the two segment equals?&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Press the LEFT button if you think the segment are equals, or the RIGHT button if you think they are differents.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;answer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The correct answer is yes!&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;resources/images/ponzo/ponzo10.png&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>At the end click on <code class="docutils literal notranslate"><span class="pre">SAVE</span></code>.</p>
-</div>
-<div class="section" id="main-page">
-<h3>1.3. Main Page<a class="headerlink" href="#main-page" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="main-page">
+<h3>1.3. Main Page<a class="headerlink" href="#main-page" title="Permalink to this heading"></a></h3>
 <p>In the admin interface use <code class="docutils literal notranslate"><span class="pre">+Add</span></code> for mains pages, we find the same information to fill in:</p>
 <ul class="simple">
 <li><p>the name field to <em>“Ponzo Main”</em>;</p></li>
@@ -184,8 +184,8 @@
 </ul>
 <p>The JSON field to:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Are the two segment equals?&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Press the LEFT button if you think the segment are equals, or the RIGHT button if you think they are differents.&quot;</span>
+<span class="w">  </span><span class="nt">&quot;question&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Are the two segment equals?&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Press the LEFT button if you think the segment are equals, or the RIGHT button if you think they are differents.&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -193,9 +193,9 @@
 <p class="admonition-title">Note</p>
 <p>An image will be loaded in the main page, but we will see later that its loading is dynamic.</p>
 </div>
-</div>
-<div class="section" id="end-page">
-<h3>1.4. End Page<a class="headerlink" href="#end-page" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="end-page">
+<h3>1.4. End Page<a class="headerlink" href="#end-page" title="Permalink to this heading"></a></h3>
 <p>In the admin interface use <code class="docutils literal notranslate"><span class="pre">+Add</span></code> for mains pages, we find the same information to fill in:</p>
 <ul class="simple">
 <li><p>the name field to <em>“Ponzo End”</em>;</p></li>
@@ -206,15 +206,15 @@
 </ul>
 <p>And the JSON field to:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;end_text&quot;</span><span class="p">:</span> <span class="s2">&quot;The experiment is now finished.&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;thanks_text&quot;</span><span class="p">:</span> <span class="s2">&quot;Thanks for your participation!&quot;</span>
+<span class="w">  </span><span class="nt">&quot;end_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The experiment is now finished.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;thanks_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Thanks for your participation!&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Then click on <code class="docutils literal notranslate"><span class="pre">SAVE</span></code> button.</p>
-</div>
-<div class="section" id="experiment-creation">
-<h3>1.5. Experiment creation<a class="headerlink" href="#experiment-creation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="experiment-creation">
+<h3>1.5. Experiment creation<a class="headerlink" href="#experiment-creation" title="Permalink to this heading"></a></h3>
 <p>In the admin interface use <code class="docutils literal notranslate"><span class="pre">+Add</span></code> for experiments, you can fill in the different fields as below:</p>
 <ul class="simple">
 <li><p>the title field to <em>“Ponzo experiment”</em>;</p></li>
@@ -230,23 +230,23 @@
 <li><p>let the JSON config as empty;</p></li>
 </ul>
 <p>Then click on <code class="docutils literal notranslate"><span class="pre">SAVE</span></code> in order to create the experiment.</p>
-</div>
-</div>
-<div class="section" id="create-a-session-progress-class">
-<h2>2. Create a Session Progress class<a class="headerlink" href="#create-a-session-progress-class" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="create-a-session-progress-class">
+<h2>2. Create a Session Progress class<a class="headerlink" href="#create-a-session-progress-class" title="Permalink to this heading"></a></h2>
 <p>As a reminder, a SessionProgress is composed of 4 main methods as detailed below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SessionProgress</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SessionProgress</span><span class="p">():</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Define and init some progress variables</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Define next step data object taking into account current step and answer</span>
 
 <span class="sd">        Return: JSON data object</span>
@@ -254,8 +254,8 @@
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Define the percent progress of the experiment</span>
 
 <span class="sd">        Return: float progress between [0, 100]</span>
@@ -263,8 +263,8 @@
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Check whether it&#39;s the end or not of the experiment</span>
 
 <span class="sd">        Return: bool</span>
@@ -275,9 +275,9 @@
 <p>The figure below details where the methods of the SessionProgress instance are realized:</p>
 <a class="reference internal image-reference" href="_images/global_scheme.png"><img alt="_images/global_scheme.png" class="align-center" src="_images/global_scheme.png" style="width: 95%;" /></a>
 <p>In the <code class="docutils literal notranslate"><span class="pre">experiments/experiments</span></code> folder of the projet create a <code class="docutils literal notranslate"><span class="pre">ponzo.py</span></code> python file.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">..models</span> <span class="kn">import</span> <span class="n">SessionProgress</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..models</span><span class="w"> </span><span class="kn">import</span> <span class="n">SessionProgress</span>
 
-<span class="k">class</span> <span class="nc">PonzoSessionProgress</span><span class="p">(</span><span class="n">SessionProgress</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PonzoSessionProgress</span><span class="p">(</span><span class="n">SessionProgress</span><span class="p">):</span>
     <span class="o">...</span>
 </pre></div>
 </div>
@@ -286,8 +286,8 @@
 <p>A SessionProgress is also composed of a field <code class="docutils literal notranslate"><span class="pre">data</span></code> which is a JSON field. We can into this field store some participant information.</p>
 </div>
 <p>We will now define each required method for our new <code class="docutils literal notranslate"><span class="pre">PonzoSessionProgress</span></code>.</p>
-<div class="section" id="the-start-method">
-<h3>2.1. The start method<a class="headerlink" href="#the-start-method" title="Permalink to this headline">¶</a></h3>
+<section id="the-start-method">
+<h3>2.1. The start method<a class="headerlink" href="#the-start-method" title="Permalink to this heading"></a></h3>
 <p>The start method can be composed of:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> field initialization;</p></li>
@@ -295,7 +295,7 @@
 <li><p>retrieve data from the information form (present in the information page);</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">save</span></code> call in order to save data instance inside the database.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_data</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant_data</span><span class="p">):</span>
 
     <span class="c1"># need to be initialized in order to start experiment</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -313,21 +313,21 @@
 </pre></div>
 </div>
 <p>Note that in this example, we initialize in the SessionProgress data instance an indicator of the number of iterations performed, initially set to 0.</p>
-</div>
-<div class="section" id="next-method">
-<h3>2.2. Next method<a class="headerlink" href="#next-method" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="next-method">
+<h3>2.2. Next method<a class="headerlink" href="#next-method" title="Permalink to this heading"></a></h3>
 <p>The start method should be composed of:</p>
 <ul class="simple">
 <li><p>management of previous step (if exists) and its retrieve data answer (see the answer form into the main page template);</p></li>
 <li><p>process the data for the new step (here we propose a random choice).</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.conf</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
 
 <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 
     <span class="c1"># 1. update previous step depending of answer (if previous step exists)</span>
     <span class="k">if</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -352,7 +352,7 @@
     <span class="c1"># prepare next step data with random image path</span>
     <span class="n">step_data</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;src&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;{random.choice(images_path)}&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;src&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">images_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
             <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
             <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">500</span>
         <span class="p">}</span>
@@ -372,11 +372,11 @@
 <p class="admonition-title">Note</p>
 <p>The data returned from the <code class="docutils literal notranslate"><span class="pre">next</span></code> method is then accessible in the main page template from the <code class="docutils literal notranslate"><span class="pre">step.data</span></code> field.</p>
 </div>
-</div>
-<div class="section" id="progress-method">
-<h3>2.3. Progress method<a class="headerlink" href="#progress-method" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="progress-method">
+<h3>2.3. Progress method<a class="headerlink" href="#progress-method" title="Permalink to this heading"></a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">SessionProgress</span></code> is always associated with a <code class="docutils literal notranslate"><span class="pre">Session</span></code>. We can access to this session and its configuration. Let’s assume that our session’s configuration will have a <code class="docutils literal notranslate"><span class="pre">max_iterations</span></code> indicator:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 
     <span class="c1"># access of session&#39;s config from current SessionProgress instance</span>
     <span class="n">total_iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;max_iterations&#39;</span><span class="p">])</span>
@@ -390,11 +390,11 @@
 <p class="admonition-title">Note</p>
 <p>Using this method we can access to a progress percent indicator inside the main and end page using <code class="docutils literal notranslate"><span class="pre">progress_info</span></code>.</p>
 </div>
-</div>
-<div class="section" id="end-method">
-<h3>2.4. End method<a class="headerlink" href="#end-method" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="end-method">
+<h3>2.4. End method<a class="headerlink" href="#end-method" title="Permalink to this heading"></a></h3>
 <p>Based on the session’s configuration too, we can set a stopping criterion to the experiment:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">end</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
     <span class="n">total_iterations</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;max_iterations&#39;</span><span class="p">])</span>
     <span class="n">iteration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;iteration&#39;</span><span class="p">])</span>
@@ -403,20 +403,20 @@
 </pre></div>
 </div>
 <p>In order to update the new proposed model in database, you need to <strong>stop</strong> the server and do migrations:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
+python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+python<span class="w"> </span>manage.py<span class="w"> </span>runserver
 </pre></div>
 </div>
 <p>Congratulations! the way the experiment progress and ends is now coded!</p>
-</div>
-<div class="section" id="other-examples">
-<h3>1.5. Other examples<a class="headerlink" href="#other-examples" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="other-examples">
+<h3>1.5. Other examples<a class="headerlink" href="#other-examples" title="Permalink to this heading"></a></h3>
 <p>Some other examples of <code class="docutils literal notranslate"><span class="pre">SessionProgress</span></code> are available within the project: <a class="reference external" href="https://github.com/prise-3d/behavioral-online-experiment/tree/master/experiments/experiments">examples</a>.</p>
-</div>
-</div>
-<div class="section" id="create-a-new-session">
-<h2>3. Create a new Session<a class="headerlink" href="#create-a-new-session" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="create-a-new-session">
+<h2>3. Create a new Session<a class="headerlink" href="#create-a-new-session" title="Permalink to this heading"></a></h2>
 <p>Now that the progress entity is created, it is possible to associate it with a session. To do this, you can click on the <code class="docutils literal notranslate"><span class="pre">+Add</span></code> button in the administrator interface for adding a session.</p>
 <p>Let’s fill the required fields as:</p>
 <ul class="simple">
@@ -428,22 +428,22 @@ python manage.py runserver
 </ul>
 <p>Then, the current configuration of our session is as follows:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;max_iterations&quot;</span><span class="p">:</span> <span class="mi">20</span>
+<span class="w">    </span><span class="nt">&quot;max_iterations&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>We will use this configuration to specify that the participant will be confronted with a maximum of 20 stimili (i.e. 20 iterations).</p>
-</div>
-<div class="section" id="test-your-session">
-<h2>4. Test your session<a class="headerlink" href="#test-your-session" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="test-your-session">
+<h2>4. Test your session<a class="headerlink" href="#test-your-session" title="Permalink to this heading"></a></h2>
 <p>You can now access to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000/experiments/ponzo-experiment</span></code> and pass your new session. You can also download results of your session by clicking on the download icon.</p>
 <a class="reference internal image-reference" href="_images/ponzo_session_1.png"><img alt="_images/ponzo_session_1.png" class="align-center" src="_images/ponzo_session_1.png" style="width: 60%;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each downloaded results data are saved and available in JSON format.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

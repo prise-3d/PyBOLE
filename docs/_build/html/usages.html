@@ -1,23 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced usages &mdash; PyBOLE v1.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/custom.js"></script>
+  <title>Advanced usages &mdash; PyBOLE v1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=3de69b8c" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=aabfef7a"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/custom.js?v=807ba70f"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +39,6 @@
           <a href="index.html" class="icon icon-home">
             PyBOLE
           </a>
-              <div class="version">
-                v1.0.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -86,46 +86,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="advanced-usages">
-<h1>Advanced usages<a class="headerlink" href="#advanced-usages" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="custom-styles-and-javascript-for-template">
-<h2>Custom styles and javascript for template<a class="headerlink" href="#custom-styles-and-javascript-for-template" title="Permalink to this headline">¶</a></h2>
+  <section id="advanced-usages">
+<h1>Advanced usages<a class="headerlink" href="#advanced-usages" title="Permalink to this heading"></a></h1>
+<section id="custom-styles-and-javascript-for-template">
+<h2>Custom styles and javascript for template<a class="headerlink" href="#custom-styles-and-javascript-for-template" title="Permalink to this heading"></a></h2>
 <p>It is possible to define specific code of styles or javascript within a page template. For this purpose, you must specify the necessary code in the appropriate block:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Custom styles --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Custom styles --&gt;</span>
 {% block custom_stylesheets %}
     <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen&quot;</span><span class="p">&gt;</span>
 
-        <span class="c">/* Add style rules here */</span>
+<span class="w">        </span><span class="c">/* Add style rules here */</span>
 
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 {% endblock %}
 
 {% block content %}
-    <span class="c">&lt;!-- Specific content of the block --&gt;</span>
+    <span class="cm">&lt;!-- Specific content of the block --&gt;</span>
 {% endblock %}
 
-<span class="c">&lt;!-- Custom javascript --&gt;</span>
+<span class="cm">&lt;!-- Custom javascript --&gt;</span>
 {% block custom_javascripts %}
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 {% endblock %}
 </pre></div>
 </div>
 <p>This can be notably useful when the javascript code or styles are short and specific to the page. Otherwise, it is preferable to use the classic scripts available for all pages.</p>
-</div>
-<div class="section" id="dynamic-media-content-in-session-progress">
-<h2>Dynamic media content in Session Progress<a class="headerlink" href="#dynamic-media-content-in-session-progress" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dynamic-media-content-in-session-progress">
+<h2>Dynamic media content in Session Progress<a class="headerlink" href="#dynamic-media-content-in-session-progress" title="Permalink to this heading"></a></h2>
 <p>Il est possible d’exploiter des images disponibles depuis le dossier <cite>static</cite> comme stimuli. Parfois, il peut être nécessaire de générer une nouvelle image, soit par la fusion de deux autres ou avec d’autres particularités.</p>
 <p>Il est important que ces images soit également accessibles lors de la génération. Il faut donc qu’elle soit sauvegardées dans le dossier de ressources externes relatif : <code class="docutils literal notranslate"><span class="pre">settings.RELATIVE_STATIC_URL</span></code>.</p>
 <p>Voici un exemple de génération de nouvelle image:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.conf</span><span class="w"> </span><span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 
     <span class="n">cornel_box_path</span> <span class="o">=</span> <span class="s1">&#39;resources/images/cornel_box&#39;</span>
 
@@ -156,16 +156,16 @@
     <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">final</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_img_path</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="store-binary-data-into-sessionprogress">
-<h2>Store binary data into SessionProgress<a class="headerlink" href="#store-binary-data-into-sessionprogress" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="store-binary-data-into-sessionprogress">
+<h2>Store binary data into SessionProgress<a class="headerlink" href="#store-binary-data-into-sessionprogress" title="Permalink to this heading"></a></h2>
 <p>If you are using specific templates for your development, you should know that the SessionProgress template has a binary storage field called <code class="docutils literal notranslate"><span class="pre">binary</span></code>.</p>
 <p>This makes it possible to save and reload binary python objects using the pickle tool:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
 
 <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">answer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 
     <span class="c1"># example python object</span>
     <span class="n">myObj</span> <span class="o">=</span> <span class="p">{</span>
@@ -184,13 +184,13 @@
     <span class="n">obj</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="prepare-server-for-production-mode">
-<h2>Prepare server for production mode<a class="headerlink" href="#prepare-server-for-production-mode" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="prepare-server-for-production-mode">
+<h2>Prepare server for production mode<a class="headerlink" href="#prepare-server-for-production-mode" title="Permalink to this heading"></a></h2>
 <p>First your need to make sure the whole installation have been done:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py makemigrations
-python manage.pu migrate
-bash create_admin.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
+python<span class="w"> </span>manage.pu<span class="w"> </span>migrate
+bash<span class="w"> </span>create_admin.sh
 </pre></div>
 </div>
 <p>In the <code class="docutils literal notranslate"><span class="pre">webapp/settings.py</span></code>, set:</p>
@@ -212,8 +212,8 @@ bash create_admin.sh
 <p class="admonition-title">Warning</p>
 <p>Each time a new style file, a javascript file, a new instance of SessionProgress and any type of external resource is added to the <code class="docutils literal notranslate"><span class="pre">static</span></code> folder, it is necessary to update and restart the server in production.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

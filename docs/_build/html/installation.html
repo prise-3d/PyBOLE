@@ -1,23 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; PyBOLE v1.0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/custom.js"></script>
+  <title>Installation &mdash; PyBOLE v1.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=3de69b8c" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=aabfef7a"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/custom.js?v=807ba70f"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,9 +39,6 @@
           <a href="index.html" class="icon icon-home">
             PyBOLE
           </a>
-              <div class="version">
-                v1.0.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -87,21 +87,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>Installing prerequisites:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-scm.com/">git</a></p></li>
 <li><p><a class="reference external" href="https://www.python.org/">Python</a> (&gt;= 3.7)</p></li>
 </ul>
-<div class="section" id="id1">
-<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>You need to clone this repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/prise-3d/behavioral-online-experiment.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/prise-3d/behavioral-online-experiment.git
 </pre></div>
 </div>
 <p>With your python version (ideally python &gt;= 3.7), you can the following required modules:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 <p>You may need to install sqlite3 on your system.</p>
@@ -115,11 +115,11 @@
 <p class="admonition-title">Warning</p>
 <p>It may required a new Python install.</p>
 </div>
-</div>
-<div class="section" id="configure-server">
-<h2>Configure server<a class="headerlink" href="#configure-server" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="configure-server">
+<h2>Configure server<a class="headerlink" href="#configure-server" title="Permalink to this heading"></a></h2>
 <p>Add your own super user admin credentials:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp credentials.example.json credentials.json
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>credentials.example.json<span class="w"> </span>credentials.json
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -128,15 +128,15 @@
 </div>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">credentials.json</span></code> in order to configure your own admin account:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;******&quot;</span>
+<span class="w">   </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;secret_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;******&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>You can generate and replace the secret key param using a Python interpreter:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core.management.utils</span> <span class="kn">import</span> <span class="n">get_random_secret_key</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.core.management.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_secret_key</span>
 <span class="c1"># print new random secret key</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">get_random_secret_key</span><span class="p">())</span>
 </pre></div>
@@ -145,17 +145,17 @@
 <p class="admonition-title">Caution</p>
 <p>Django requires a secret key to securing signed data.</p>
 </div>
-</div>
-<div class="section" id="database-initialization">
-<h2>Database initialization<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="database-initialization">
+<h2>Database initialization<a class="headerlink" href="#database-initialization" title="Permalink to this heading"></a></h2>
 <p>Initialize the database with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py makemigrations
-python manage.py migrate
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
+python<span class="w"> </span>manage.py<span class="w"> </span>migrate
 </pre></div>
 </div>
 <p>Then create the admin account:</p>
 <p><strong>For Linux:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash create_admin.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>create_admin.sh
 </pre></div>
 </div>
 <div class="admonition note">
@@ -163,13 +163,13 @@ python manage.py migrate
 <p>if you got a confirmation message that your administrator account has been created, everything is going well for the moment!</p>
 </div>
 <p><strong>For Windows (without credentials.json):</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py createsuperuser
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>createsuperuser
 </pre></div>
 </div>
-</div>
-<div class="section" id="run-the-web-application">
-<h2>Run the web application<a class="headerlink" href="#run-the-web-application" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py runserver
+</section>
+<section id="run-the-web-application">
+<h2>Run the web application<a class="headerlink" href="#run-the-web-application" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
 </pre></div>
 </div>
 <div class="admonition note">
@@ -177,23 +177,23 @@ python manage.py migrate
 <p>The administrator interface is now available: <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000/admin</span></code>.</p>
 </div>
 <p>Or on a specific port:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python manage.py runserver <span class="m">8080</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver<span class="w"> </span><span class="m">8080</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="using-docker">
-<h2>Using docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-docker">
+<h2>Using docker<a class="headerlink" href="#using-docker" title="Permalink to this heading"></a></h2>
 <p>First, you need to add your own user admin credentials wished:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp credentials.example.json credentials.json
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>credentials.example.json<span class="w"> </span>credentials.json
 </pre></div>
 </div>
 <p>Then, use make commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make build
-make run
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>build
+make<span class="w"> </span>run
 </pre></div>
 </div>
 <p>Or simply:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make deploy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>deploy
 </pre></div>
 </div>
 <p>You also have <code class="docutils literal notranslate"><span class="pre">stop</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code>, <code class="docutils literal notranslate"><span class="pre">clean</span></code> commands:</p>
@@ -202,8 +202,8 @@ make run
 <li><p><code class="docutils literal notranslate"><span class="pre">remove</span></code>: stop and remove container instance if exists</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clean</span></code>: remove docker image if exists</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
