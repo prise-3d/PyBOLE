@@ -18,6 +18,13 @@ You need to clone this repository:
 .. _git: https://git-scm.com/
 .. _Python: https://www.python.org/
 
+Change the current directory to the project folder:
+
+.. code:: bash
+
+   cd behavioral-online-experiment
+
+
 With your python version (ideally python >= 3.7), you can the following required modules:
 
 .. code:: bash
