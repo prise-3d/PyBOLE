@@ -4,7 +4,7 @@ Installation
 Installing prerequisites:
 
 - git_
-- Python_ (>= 3.7)
+- Python_ (3.7 to 3.12)
 
 Installation
 ~~~~~~~~~~~~
