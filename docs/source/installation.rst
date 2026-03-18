@@ -25,7 +25,7 @@ Change the current directory to the project folder:
    cd behavioral-online-experiment
 
 
-With your python version (ideally python >= 3.7), you can the following required modules:
+With your python version (ideally python >= 3.7 and <= 3.12), you can the following required modules:
 
 .. code:: bash
    
