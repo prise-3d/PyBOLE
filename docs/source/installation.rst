@@ -116,7 +116,7 @@ Initialize the database with the following command:
 
 Then create the admin account:
 
-**For Linux:**
+**For Linux and Macos:**
 
 .. code:: bash
 
