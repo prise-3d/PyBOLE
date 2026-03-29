@@ -72,9 +72,9 @@ class QuestSessionProgress(SessionProgress):
         previous_entropy = None
 
         # 1. update previous step depending of answer (if previous step exists)
-        if step is not None:
-            answer_time = int(answer['quest-answer-time'])
-            answer_value = int(answer['quest-answer-value'])
+        if step is not None and 'binary-answer-time' in answer:
+            answer_time = int(answer['binary-answer-time'])
+            answer_value = int(answer['binary-answer-value'])
             
             step.data['answer_time'] = answer_time
             step.data['answer_value'] = answer_value
