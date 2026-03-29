@@ -33,7 +33,7 @@ With your python version (ideally python >= 3.7 and <= 3.12), you can the follow
 
 You may need to install sqlite3 on your system. 
 
-**For linux based system:**
+**For Debian based system:**
 
 .. code::
 
@@ -41,13 +41,28 @@ You may need to install sqlite3 on your system.
    apt install sqlite3
 
 
-**For Windows:** you may need to install following this this: sqlite3_.
+**For Windows:** you may need to install following this: sqlite3_.
 
 .. _sqlite3: https://sqlite.org/download.html
 
 .. warning::
 
    It may required a new Python install.
+
+**For Macos:**
+Test if sqlite3 is installed:
+
+.. code::
+
+   sqlite3 --version
+
+If the previous command failed, install Homebrew using the following command::
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Then install SQLite with Homebrew::
+
+    brew install sqlite
 
 
 Configure server
