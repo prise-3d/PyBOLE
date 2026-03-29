@@ -109,15 +109,28 @@
 </pre></div>
 </div>
 <p>You may need to install sqlite3 on your system.</p>
-<p><strong>For linux based system:</strong></p>
+<p><strong>For Debian based system:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">update</span>
 <span class="n">apt</span> <span class="n">install</span> <span class="n">sqlite3</span>
 </pre></div>
 </div>
-<p><strong>For Windows:</strong> you may need to install following this this: <a class="reference external" href="https://sqlite.org/download.html">sqlite3</a>.</p>
+<p><strong>For Windows:</strong> you may need to install following this: <a class="reference external" href="https://sqlite.org/download.html">sqlite3</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It may required a new Python install.</p>
+</div>
+<p><strong>For Macos:</strong>
+Test if sqlite3 is installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite3</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>If the previous command failed, install Homebrew using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span>
+</pre></div>
+</div>
+<p>Then install SQLite with Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">sqlite</span>
+</pre></div>
 </div>
 </section>
 <section id="configure-server">
