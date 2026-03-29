@@ -1,0 +1,78 @@
+{% extends 'pages/page_base.html' %}
+
+{% load static %}
+{% load apptags %}    
+
+{% block content %}
+
+<div class="justify-content-center">
+    <div class="py-2">
+        <a href="{% url 'experiments:experiment' slug=experiment.slug %}" class="btn btn-primary btn-icon-split btn-sm">
+            <span class="icon text-white-50">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+            <span class="text">Back to {{experiment.title}}</span>
+        </a>
+    </div>
+    
+    <!-- Page Heading -->
+    <div class="text-center">
+        <h3>{{page.content|from_json:"question"}}</h3>
+    </div>
+
+    <div class="text-center">
+        <h5>{{page.content|from_json:"description"}}</h5>
+    </div>
+
+    <div class="row text-center">
+        <!-- Play sound -->
+        {% with sound=page.content|from_json:"sound" %}
+
+            <!-- Set same height to div in order to avoid buttons flickering.. -->
+            <div class="col-xl-12 col-md-12 mb-12">
+                <audio controls>
+                    <source src="{% static sound|from_json:'src' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+            
+            </div>
+        {% endwith %}
+
+    </div>
+    
+    <div class="text-center">
+        <h5>{{page.content|from_json:"answer"}}</h5>
+        
+        <!-- If participant progression exists-->
+        {% if progress %}
+            <div class="row justify-content-md-center py-4">
+                <form method="post" class="col-xs-6 col-md-offset-3" action="{% url 'experiments:run_session' slug=experiment.slug session_id=session.id progress_id=progress.id %}">  
+                    {% csrf_token %} 
+                    <div class="row"></div> 
+                        <div class="col-auto">
+                            
+                            <button type="submit" class="btn btn-success btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="text">{% if progress.is_started %}Continue{% else %}Start{% endif %} experiment</span>
+                            </button>
+                        </div>
+                    </div>
+                </form> 
+            </div> 
+                
+        {% else %}
+        <div class="py-2">
+            <a href="{% url 'experiments:experiment' slug=experiment.slug %}" class="btn btn-success btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-check"></i>
+                </span>
+                <span class="text">Find session for experiment</span>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

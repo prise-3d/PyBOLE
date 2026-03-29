@@ -1,0 +1,80 @@
+{% extends 'pages/page_base.html' %}
+
+{% load static %}
+{% load apptags %}
+
+{% block content %}
+
+<div class="justify-content-center">
+
+    <!-- Page Heading -->
+    <div class="py-2 text-center">
+        <h4>{{page.content | from_json:"question"}}</h4>
+    </div>
+
+    <!-- Page Heading -->
+    <div class="py-2 text-center">
+        <h5>{{page.content | from_json:"description"}}</h5>
+    </div>
+
+    <div class="row justify-content-md-center py-2">
+        <div class="col-xl-8 col-md-8 mb-8">
+            <div class="mb-1 small">Experiment progress ({{progress_info}}%)</div>
+            <div class="progress progress-sm mb-2">
+                <div class="progress-bar bg-success" role="progressbar" style="width: {{progress_info}}%" aria-valuenow="{{progress_info}}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-2 justify-content-md-center text-center">
+         <!-- Play sound -->
+        {% with sound=step.data|from_json:"sound" %}
+
+            <!-- Set same height to div in order to avoid buttons flickering.. -->
+            <div class="col-xl-12 col-md-12 mb-12">
+                <audio controls>
+                    <source src="{% static sound|from_json:'src' %}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+            
+            </div>
+        {% endwith %}
+
+    </div>
+    
+    <!-- If participant progression exists-->
+    <!-- If participant progression exists-->
+    {% if progress %}
+        <div class="row justify-content-md-center py-4 experiment-buttons text-center">
+            
+            <form class="binary-answer-form" method="post" class="col-xs-6 col-md-offset-3" action="{% url 'experiments:run_session' slug=experiment.slug session_id=session.id progress_id=progress.id %}">  
+                {% csrf_token %}
+                <input type="hidden" name="binary-answer-time"/>
+                <input type="hidden" name="binary-answer-value"/>
+                
+                <div class="row">
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-danger btn-icon-split" value="0">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-times-circle"></i>
+                            </span>
+                            <span class="text">Not an elephant</span>
+                        </button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success btn-icon-split" value="1">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="text">An elephant</span>
+                        </button>
+                    </div>
+                </div>
+            
+            </form> 
+        
+        </div> 
+    {% endif %}
+</div>
+{% endblock %}
