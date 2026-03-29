@@ -38,7 +38,7 @@ You will now be redirected to this form:
    :width: 80%
    :align: center
 
-- fill in the different fields of your page, like the name *"Ponzon Illusion"* and the title *"ponzon_illusion"*. The name identifies the page in the administrator interface, the title will be used in the URL;
+- fill in the different fields of your page, like the name *"Ponzo Illusion"* and the title *"ponzo_illusion"*. The name identifies the page in the administrator interface, the title will be used in the URL;
 
 - then you have to select the javascripts and styles files. For this example, we select only ``toggle_sidebar.js`` (the styles and javascript files are available in the project in the folder: ``static/experiment``, but it is not necessary to modify them right away);
 
