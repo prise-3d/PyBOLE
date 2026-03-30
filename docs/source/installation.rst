@@ -102,6 +102,7 @@ You can generate and replace the secret key param using a Python interpreter:
 .. caution:: 
 
    Django requires a secret key to securing signed data.
+   Never share this credential under any circumstances. Do not include it in files sent to others, and never commit it to version control systems like GitHub. If your key is exposed, attackers can spoof user sessions and compromise your entire site.
 
 Database initialization
 ~~~~~~~~~~~~~~~~~~~~~~~
